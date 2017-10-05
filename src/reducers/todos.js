@@ -12,17 +12,17 @@ const todo = (state, action) => {
 			}
 			return Object.assign({}, state, {
 				completed: !state.completed
-			})
+			});
 		default:
 			return state
 	}
 }
 
-const todos = (state, action) =>{
+const todos = (state=[], action) =>{
 	switch(action.type){
 		case "ADD_TODO":
 			return[
-				...state;
+				...state,
 				todo(undefined, action)
 			]
 		case "TOGGLE_TODO":

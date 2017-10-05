@@ -1,22 +1,22 @@
 let nextTodoId = 0;
 
 export const addTodo = (text) => {
-	return{
+	return {
 		type:"ADD_TODO",
-		id:nextTodoId,
+		id:nextTodoId++,
 		text
 	}
 }
 
 export const setVisibility = (filter) => {
-	return  {
+	return {
 		tpye:"SET_VISIBILITY",
 		filter
 	}
 }
 
 export const toggleTodo = (id) => {
-	return{
+	return {
 		type:"TOGGLE_TODO",
 		id
 	}
